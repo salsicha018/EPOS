@@ -95,4 +95,5 @@ def app ():
         p.line(Motor, y, legend_label = 'Tendencia', line_width=2)
         st.bokeh_chart(p, use_container_width=True)
     
-# criar agora uma parte para salvar os resultados 
+# criar agora uma parte para salvar os resultados
+#este é um comentario teste
