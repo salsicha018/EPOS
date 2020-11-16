@@ -58,7 +58,7 @@ def LV_HAACKcoifa(Lc):
 def coifavonkarman(Lc):
     Xn = 0,500*Lc
     return (Xn)
-def coifa_genérica (Vol,R):
+def coifa_generica (Vol,R):
     
     A = float(R*R*3.14)
     Xn = Vol/A
@@ -90,7 +90,7 @@ def CP(ForcaNormalTotal,forca_normal_aleta,Xn,a,b,m,Xf):
     CP = (((2*Xn) + ( forca_normal_aleta * cp_aleta(a,b,m,Xf) ) )/(ForcaNormalTotal))
     return (CP)
 #função que define a margem estatica do foguete
-def Margemestatica(CG,CP):
+def Margemestatica(CG,CP,d):
     '''
     A margem estatica é definida em termos de calibre, onde um cal corresponde ao diametro do foguete
     O valor ideal para esta na faixa é de 1,0 a 2,0 calibres
