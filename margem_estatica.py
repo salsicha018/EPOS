@@ -46,8 +46,13 @@ def app():
     st.write('CP: ',CP)
     d = st.number_input('Insira o valor do diametro do Foguete')
     st.write('diametro: ', d)
-    Margem_estatica = mm.Margemestatica(CG,CP,d)
-    st.write(f' Margem estatica = {Margem_estatica} cal')
+   
+    #adicionando um botão para executar uma ação
+    
+    botao = st.button('Calcular margem estatica')
+    if botao:
+        Margem_estatica = mm.Margemestatica(CG,CP,d)
+        st.write(f' Margem estatica = {Margem_estatica} cal')
     
 
     
