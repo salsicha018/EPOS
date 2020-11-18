@@ -75,9 +75,7 @@ def app ():
         st.write('A localização do Cp no foguete é: ',Xcp)
              
     
-    st.subheader('Calculo da Margem Estática')
-    
-    #a seguir sera feito o calculo da margem estatica isso significa que estamos avançando nessa porra 
+    # tem-se a necessidade de criar um grafico do movimento do centro de pressao do foguetao 
     
     
     
