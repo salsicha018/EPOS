@@ -97,3 +97,8 @@ def app ():
     
 # criar agora uma parte para salvar os resultados
 #este é um comentario teste
+
+    #a partir daqui começa a parte de implementação de um método para salvar resultados 
+    # a ideia inicial é criar um metodo para salvar um arquivo ao final da pagina que salve todas as informações na forma de um dataframe
+    
+    
