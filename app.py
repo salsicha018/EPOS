@@ -2,12 +2,14 @@
 
 import centrodegravidade
 import centrodepressao
+import margem_estatica 
 import arrasto
+import inicio
 import streamlit as st 
 import pandas as pd 
 import meu_modulo as mm
-import margem_estatica 
-PAGES = {"Centro de Gravidade": centrodegravidade,
+PAGES = {"Inicio": inicio
+         "Centro de Gravidade": centrodegravidade,
          "Centro de Pressão": centrodepressao,
          "Arrasto": arrasto,
          "Margem Estatica": margem_estatica}
