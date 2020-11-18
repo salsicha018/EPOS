@@ -8,7 +8,7 @@ import inicio
 import streamlit as st 
 import pandas as pd 
 import meu_modulo as mm
-PAGES = {"Inicio": inicio
+PAGES = {"Inicio": inicio ,
          "Centro de Gravidade": centrodegravidade,
          "Centro de Pressão": centrodepressao,
          "Arrasto": arrasto,
