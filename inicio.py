@@ -11,7 +11,7 @@ def app():
     """Essa aplicação foi construida acreditando-se na necessidade uma ferrementa de facil acesso e ampla possibilidade de colaboração dos usuarios"""
     st.subheader('o que você encontrará aqui:')
 
-    st.text('Nessa versão inicial, trazemos os calculos do centro de gravidade, centro de pressão, margem estatica e arrasto do foguete. Esses calculos foram construidos com base no trabalho de Barrowman, portanto, existem limitações para esses calculos que devem ser levadas em conta. dessa forma, aqui vão os pontos assumidos até então: ')
+    st.write('Nessa versão inicial, trazemos os calculos do centro de gravidade, centro de pressão, margem estatica e arrasto do foguete. Esses calculos foram construidos com base no trabalho de Barrowman, portanto, existem limitações para esses calculos que devem ser levadas em conta. dessa forma, aqui vão os pontos assumidos até então: ')
 
     st.write('1 - O regime de escoamento do ar considerado é incompressível')   
     st.write('2 - O angulo de ataque usado até então é igual a zero')
