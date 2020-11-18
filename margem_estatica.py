@@ -41,11 +41,11 @@ def app():
     #input dos valores do CG e CP:
 
     CG = st.number_input('Insira o valor do CG')
-    st.write('CG: ',Cg)
+    st.write('CG: ',CG)
     CP = st.number_input('Insira o valor do CP')
     st.write('CP: ',CP)
     d = st.number_input('Insira o valor do diametro do Foguete')
-    
+    st.write('diametro: ', d)
     Margem_estatica = mm.Margemestatica(CG,CP,d)
     st.write(f' Margem estatica = {Margem_estatica} cal')
     
