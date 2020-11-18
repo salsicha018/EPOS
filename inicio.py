@@ -1,12 +1,14 @@
 #importacao das bibliotecas necessarias
 
 import streamlit as st
-
+from PIL import Image
 
 #comeco do codigo
 def app():
     
     st.title('EPOS')
+    image = Image.open('logopp.jpg')
+    st.image(image, use_column_width = True)
     st.header('Inicio')
     """Essa aplicação foi construida acreditando-se na necessidade uma ferrementa de facil acesso e ampla possibilidade de colaboração dos usuarios"""
     st.subheader('o que você encontrará aqui:')
