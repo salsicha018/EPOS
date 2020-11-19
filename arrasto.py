@@ -127,7 +127,9 @@ def app ():
         return (A)             
     
     
-    
+    def arrastou(Vel):#mais uma funcao sendo definida no lugar errado mas ok, é preciso falhar para acertar uma hora 
+        Arrastoooooooo= 0.5*(Vel**2)*(3.14/4)*(d**2)*CDDDDDO
+        return (Arrastoooooooo)
     
     
     
@@ -175,9 +177,9 @@ def app ():
         
         
         while Vel < 333:#velocidade em metros por segundo
-        ForcadeArrasto.append(arrastou(Vel))
-        Velocidade.append(Vel)
-        Vel +=5
+            ForcadeArrasto.append(arrastou(Vel))
+            Velocidade.append(Vel)
+            Vel +=5
         from bokeh.plotting import figure
         a = figure(
         title='Variação da força de arrasto de acordo com a velocidade',
