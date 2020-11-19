@@ -161,3 +161,26 @@ def app ():
         st.write(f'Arrasto = {arrastou} N')
     
     
+    
+        
+        #plotando um grafico para o arrasto do foguete até atingir a velocidade do som 
+        
+        while Vel < 333:#velocidade em metros por segundo
+        ForcadeArrasto.append(arrastou(Vel))
+        Velocidade.append(Vel)
+        Vel +=5
+        from bokeh.plotting import figure
+        a = figure(
+        title='Variação da força de arrasto de acordo com a velocidade',
+        x_axis_label='Velocidade',
+        y_axis_label='Arrasto')
+        a.line(Velocidade,ForcadeArrasto, legend_label = 'Tendencia', line_width=2)
+        st.bokeh_chart(a, use_container_width=True)
+
+#arquivo de saida 
+#colocar um codigo para realizar um esquema de arquivo de saida
+
+
+
+
+    
