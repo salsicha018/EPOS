@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np 
 import matplotlib.pyplot as plt
 import meu_modulo as mm 
-
+import pandas as pd
 
 def app ():
     st.title('Nessa seçao você podera calcular o Arrasto no foguete')
@@ -164,6 +164,15 @@ def app ():
     
         
         #plotando um grafico para o arrasto do foguete até atingir a velocidade do som 
+        Velocidade = []
+
+
+        ForcadeArrasto = []
+        Vel = 1#m/s
+        df2 = pd.DataFrame({'Vel_Foguete':Velocidade,'Arrasto_no_foguete':ForcadeArrasto})
+        
+        
+        
         
         while Vel < 333:#velocidade em metros por segundo
         ForcadeArrasto.append(arrastou(Vel))
