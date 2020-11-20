@@ -25,7 +25,7 @@ def MassaTotal( Coifa , Corpo1, Corpo2,  Motor, Aleta1,AnelCentralizador,BulkHea
  #   return cg
 
 
-#refazendo o calculo do centro de gravidade considerando um novo tipo de input, que só leva em conta o 
+#refazendo o calculo do centro de gravidade considerando um novo tipo de input, que só leva em conta o comprimento dos componentes 
 def CG(Coifa , Corpo1, Corpo2,  Motor, Aleta1 , Coifa_dis,Corpo1_dis,Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead):
     cg = (1/MassaTotal(Coifa , Corpo1,Corpo2, Motor, Aleta1,AnelCentralizador,BulkHead))*((Coifa_dis/2)*Coifa + Coifa_dis*AnelCentralizador +(Coifa_dis+(Corpo1_dis/2))*Corpo1+(Coifa_dis+Corpo1_dis)*AnelCentralizador+ (Coifa_dis+Corpo1_dis+(Corpo2_dis/2))*(Corpo2)+ (Coifa_dis+Corpo1_dis+Corpo2_dis - Aleta1_dis+(Aleta1_dis/2))*Aleta1*3 + (Coifa_dis+Corpo1_dis+Corpo2_dis- Motor_dis +(Motor_dis/2))*Motor)
     return (cg)
