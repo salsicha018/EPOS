@@ -72,7 +72,7 @@ def app ():
         forca_normal_aleta = mm.Kfb(d,s)*mm.ForcaN_aleta(n,s,d,l,a)         
         ForcaNormalTotal = 2 + forca_normal_aleta     
         Xf = L - a
-        Xcp =1000*mm.CP(ForcaNormalTotal,forca_normal_aleta,Xn,a,b,m,Xf)   
+        Xcp =1000*mm.CP(mm.cp_aleta(a,b,m,Xf),ForcaNormalTotal,forca_normal_aleta,Xn,a,b,m,Xf)   
         st.write('A localização do Cp no foguete é: ',Xcp)
              
     
