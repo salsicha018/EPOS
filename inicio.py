@@ -26,8 +26,10 @@ def app():
 
 
 
-    st.subheader('O que há para o futuro?')
-    st.write('Implementação de mais calculos')
+    st.subheader('O que há para o futuro?\n')
+    st.write('Implementação de mais calculos\n')
+    st.write('Sistema de saida de dados em forma de relatorio\n')
+    st.write('Sistema de input de dados para agilizar os calculos')
     st.write('espero que essa aplicação seja muito util para nós como um todo')
     st.write('Desenvolvedor responsável: Paulo Vinicius Pimentel da Silva Camargo; Telefone: (12)996776894; e-mail: paulo.vine@usp.br')
 
