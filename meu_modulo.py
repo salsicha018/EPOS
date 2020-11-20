@@ -79,15 +79,15 @@ def ForcaN_aleta(n,s,d,l,a):
     #b é a altura da lateral mais externa da aleta
     #a é o comprimento da raiz que fica colada no corpo do foguete
     #d é o diametro d =o corpo do foguete, ou então a distancia entre as aletas.
-    Forcanormal_aleta = float((4*n*(s/d)**2)/(1 + (1 + (2*l/(a+b))**2)**(1/2)))
-    return(Forcanormal_aleta)
+    return ((4*n*(s/d)**2)/(1 + (1 + (2*l/(a+b))**2)**(1/2)))
+    
                                                           
 #calculando a força normal total na aleta
 
                                                           
 #função que define o centro de pressão do foguete:
-def CP(ForcaNormalTotal,forca_normal_aleta,Xn,a,b,m,Xf):
-    CP = (((2*Xn) + ( forca_normal_aleta * cp_aleta(a,b,m,Xf) ) )/(ForcaNormalTotal))
+def CP(func,ForcaNormalTotal,forca_normal_aleta,Xn,a,b,m,Xf):
+    CP = (((2*Xn) + ( forca_normal_aleta *func ) )/(ForcaNormalTotal))
     return (CP)
 #função que define a margem estatica do foguete
 def Margemestatica(CG,CP,d):
