@@ -44,11 +44,8 @@ def app ():
     st.write('note que o nome anel centralizador quer dizer na verdade, acoplador. me desculpe foi um erro aqui')
     
     
-    AnelCentralizador = st.number_input('Insira a massa do Acoplador
-                                        
-                                        
-                                        ')
-    st.write('A massa do anel centralizador é: ',AnelCentralizador)
+    AnelCentralizador = st.number_input('Insira a massa do Acoplador')
+    st.write('A massa do Acoplador é: ',AnelCentralizador)
     
     BulkHead = st.number_input('Insira a massa do bulkhead')
     st.write('A massa do BulKhead é: ',BulkHead)
