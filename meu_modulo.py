@@ -71,7 +71,7 @@ def cp_aleta(a,b,m,L):
     Xfbarra = (L - a) + m*(a+2*b)/3*(a+b)+ (1/6)*(a+b- (a*b)/(a+b))
     return (Xfbarra)
 
-def ForcaN_aleta(n,s,d,l,a):
+def ForcaN_aleta(n,s,d,l,a,b):
     
     #n é o numero de aletas
     #s é a distancia da raiz da aleta até a lateral mais externa
