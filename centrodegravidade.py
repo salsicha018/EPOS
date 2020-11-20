@@ -50,8 +50,9 @@ def app ():
     BulkHead = st.number_input('Insira a massa do bulkhead')
     st.write('A massa do BulKhead é: ',BulkHead)
     #comprimentos
-    st.header('Comprimento')#colocando so um titulo para separar as coisas de uma forma mais organizada
+    st.header('Dimensionamento')#colocando so um titulo para separar as coisas de uma forma mais organizada
     
+    #comprimento dos componentes
     
     Coifa_dis =st.number_input('Insira o Comprimento da Coifa')
     st.write('Comprimento da Coifa: ', Coifa_dis)
@@ -74,7 +75,7 @@ def app ():
     Motor +=Propelente
     
     if TudoCerto:
-        st.write('O valor do CG é: ',(mm.CG( Coifa,Corpo1,Corpo2,Motor,Aleta1,Coifa_dis,Corpo1_dis, Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead)/10))
+        st.write('O valor do CG, com o foguete carregado com propelente é: ',(mm.CG( Coifa,Corpo1,Corpo2,Motor,Aleta1,Coifa_dis,Corpo1_dis, Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead)/10))
         cg = mm.CG(Coifa , Corpo1, Corpo2,  Motor, Aleta1 , Coifa_dis,Corpo1_dis,Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead)
 
         
@@ -84,14 +85,13 @@ def app ():
     y = 0
 
     if TudoCerto1:
-        Motor = np.array(np.linspace(Motor - Propelente,Motor + Propelente,100))
+        Motor = np.array(np.linspace(Motor - Propelente,Motor,100))
         y = mm.CG(Coifa , Corpo1, Corpo2,  Motor, Aleta1 , Coifa_dis,Corpo1_dis,Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead) 
         df = pd.DataFrame({'Massa_do_Motor': Motor, 'Centro_de_Gravidade': y})
         from bokeh.plotting import figure
-        p = figure(
-        title='Variação do Centro de Gravidade de acordo com a diminuição da massa do motor',
-  x_axis_label='Massa',
-  y_axis_label='CG')
+        p = figure(title='Variação do Centro de Gravidade de acordo com a diminuição da massa do motor',
+                   x_axis_label='Massa',
+                   y_axis_label='CG')
         p.line(Motor, y, legend_label = 'Tendencia', line_width=2)
         st.bokeh_chart(p, use_container_width=True)
     
