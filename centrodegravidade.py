@@ -44,7 +44,10 @@ def app ():
     st.write('note que o nome anel centralizador quer dizer na verdade, acoplador. me desculpe foi um erro aqui')
     
     
-    AnelCentralizador = st.number_input('Insira a massa do anel centralizador')
+    AnelCentralizador = st.number_input('Insira a massa do Acoplador
+                                        
+                                        
+                                        ')
     st.write('A massa do anel centralizador é: ',AnelCentralizador)
     
     BulkHead = st.number_input('Insira a massa do bulkhead')
@@ -72,9 +75,10 @@ def app ():
     TudoCerto = st.checkbox('Calcular  o CG')#isso aqui é uma check box que caso seja marcada ira executar o codigo a seguir
     
     #atribuindo a massa do Propelente ao motor:
-    Motor +=Propelente
+    
     
     if TudoCerto:
+        Motor +=Propelente
         st.write('O valor do CG, com o foguete carregado com propelente é: ',(mm.CG( Coifa,Corpo1,Corpo2,Motor,Aleta1,Coifa_dis,Corpo1_dis, Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead)/10))
         cg = mm.CG(Coifa , Corpo1, Corpo2,  Motor, Aleta1 , Coifa_dis,Corpo1_dis,Corpo2_dis,Motor_dis,Aleta1_dis,AnelCentralizador,BulkHead)
 
