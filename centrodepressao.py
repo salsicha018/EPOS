@@ -1,4 +1,5 @@
 import streamlit as st
+import meu_modulo as mm
 def app ():
     st.title('Centro de Pressão')
     st.write('Nessa seção será possível calcular o Centro de pressão:')
